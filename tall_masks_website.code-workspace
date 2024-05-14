@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../tall_masks_website"
+		},
+		{
+			"path": "../tall-masks-website2"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "tall-masks.github.io"
+	}
+}
