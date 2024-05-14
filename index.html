@@ -352,7 +352,7 @@
     </div>
   </section>
   <section class="section hero">
-    <div class="container is-max-desktop">
+    <div class="container">
       <div class="columns is-centered has-text-centered">
         <div class="column">
           <h2 class="title is-3">Key observations</h2>
@@ -371,101 +371,104 @@
           <br>
           <br>
           <br>
-
           <div class="container">
-            <div class="content has-text-left">
-              <p>
-                <b style="color: blue;">Observation 2</b>: Different model merging methods result in different
-                allocation
-                of important parameters across tasks. For instance, TIES aligns a significant portion of the paramaters
-                so
-                that they are deemed imporant by all tasks. The <em>mask agreement profile</em> varies as the number of
-                tasks increases.
-              </p>
-            </div>
-            <div id="results-carousel" class="carousel results-carousel">
-              <div class="item">
-                <!-- Your image here -->
-                <center>
-                  <img src="static/images/weights_a.png" alt="MY ALT TEXT" width="80%" />
-                </center>
-                <h2 class="subtitle has-text-centered">
-                  8 tasks. TIES pushes the distribution of weights to the edges: important for all and for a few tasks.
-                </h2>
+            <div class="container">
+              <div class="content has-text-left">
+                <p>
+                  <b style="color: blue;">Observation 2</b>: Different model merging methods result in different
+                  allocation
+                  of important parameters across tasks. For instance, TIES aligns a significant portion of the
+                  paramaters
+                  so
+                  that they are deemed imporant by all tasks. The <em>mask agreement profile</em> varies as the number
+                  of
+                  tasks increases.
+                </p>
               </div>
-              <div class="item">
-                <!-- Your image here -->
-                <center>
-                  <img src="static/images/weights_b.png" alt="MY ALT TEXT" width="80%" />
-                </center>
-                <h2 class="subtitle has-text-centered">
-                  14 tasks. The same effect is more pronounced.
-                </h2>
-              </div>
-              <div class="item">
-                <!-- Your image here -->
-                <center>
-                  <img src="static/images/weights_c.png" alt="MY ALT TEXT" width="80%" />
-                </center>
-                <h2 class="subtitle has-text-centered">
-                  20 tasks. The same effect is more pronounced. Task Arithmetic has a more balanced distribution of mask
-                  agreement.
-                </h2>
-              </div>
-            </div>
-          </div>
-          <br>
-          <br>
-          <br>
-          <div class="container">
-            <div class="content has-text-left">
-              <p>
-                <b style="color: blue;">Observation 3</b>: The difference in <em>mask agreement profiles</em> leads to
-                different performance of merged models as more and more parameters are discarded. The behavior depends
-                on the number of tasks but TIES is more sensitive thatn Task Arithmetic (TA).
-              </p>
-            </div>
-            <div id="results-carousel" class="carousel results-carousel">
-              <div class="item">
-                <!-- Your image here -->
-                <center>
-                  <img src="static/images/consensus_a.png" alt="MY ALT TEXT" width="70%" />
-                </center>
-                <h2 class="subtitle has-text-centered">
-                  8 tasks. TIES and TA perform similarly. TIES works better for \(k=1\) which makes sense given the
-                  corresponding mask agreement distribution above.
-                </h2>
-              </div>
-              <div class="item">
-                <!-- Your image here -->
-                <center>
-                  <img src="static/images/consensus_b.png" alt="MY ALT TEXT" width="70%" />
-                </center>
-                <h2 class="subtitle has-text-centered">
-                  14 tasks. Task arithmetic performs better when removing parameters deemed imporantby a few tasks. The
-                  opposite is true for TIES.
-                </h2>
-              </div>
-              <div class="item">
-                <!-- Your image here -->
-                <center>
-                  <img src="static/images/consensus_c.png" alt="MY ALT TEXT" width="70%" />
-                </center>
-                <h2 class="subtitle has-text-centered">
-                  20 tasks. The effect is even more pronounced with task arithmetic being more robust to the threshold
-                  \(k\). Still, applying the consensus mask for \(k=1\) improves TIES.
-                </h2>
+              <div id="results-carousel" class="carousel results-carousel">
+                <div class="item">
+                  <!-- Your image here -->
+                  <center>
+                    <img src="static/images/weights_a.png" alt="MY ALT TEXT" width="80%" />
+                  </center>
+                  <h2 class="subtitle has-text-centered">
+                    8 tasks. TIES pushes the distribution of weights to the edges: important for all and for a few
+                    tasks.
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <center>
+                    <img src="static/images/weights_b.png" alt="MY ALT TEXT" width="80%" />
+                  </center>
+                  <h2 class="subtitle has-text-centered">
+                    14 tasks. The same effect is more pronounced.
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <center>
+                    <img src="static/images/weights_c.png" alt="MY ALT TEXT" width="80%" />
+                  </center>
+                  <h2 class="subtitle has-text-centered">
+                    20 tasks. The same effect is more pronounced. Task Arithmetic has a more balanced distribution of
+                    mask
+                    agreement.
+                  </h2>
+                </div>
               </div>
             </div>
-          </div>
+            <br>
+            <br>
+            <br>
+            <div class="container">
+              <div class="content has-text-left">
+                <p>
+                  <b style="color: blue;">Observation 3</b>: The difference in <em>mask agreement profiles</em> leads to
+                  different performance of merged models as more and more parameters are discarded. The behavior depends
+                  on the number of tasks but TIES is more sensitive thatn Task Arithmetic (TA).
+                </p>
+              </div>
+              <div id="results-carousel" class="carousel results-carousel">
+                <div class="item">
+                  <!-- Your image here -->
+                  <center>
+                    <img src="static/images/consensus_a.png" alt="MY ALT TEXT" width="70%" />
+                  </center>
+                  <h2 class="subtitle has-text-centered">
+                    8 tasks. TIES and TA perform similarly. TIES works better for \(k=1\) which makes sense given the
+                    corresponding mask agreement distribution above.
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <center>
+                    <img src="static/images/consensus_b.png" alt="MY ALT TEXT" width="70%" />
+                  </center>
+                  <h2 class="subtitle has-text-centered">
+                    14 tasks. Task arithmetic performs better when removing parameters deemed imporantby a few tasks.
+                    The
+                    opposite is true for TIES.
+                  </h2>
+                </div>
+                <div class="item">
+                  <!-- Your image here -->
+                  <center>
+                    <img src="static/images/consensus_c.png" alt="MY ALT TEXT" width="70%" />
+                  </center>
+                  <h2 class="subtitle has-text-centered">
+                    20 tasks. The effect is even more pronounced with task arithmetic being more robust to the threshold
+                    \(k\). Still, applying the consensus mask for \(k=1\) improves TIES.
+                  </h2>
+                </div>
+              </div>
+            </div>
 
 
+          </div>
         </div>
       </div>
-    </div>
   </section>
-
-
 
   <!-- Youtube video -->
   <!-- <section class="hero is-small is-light">
